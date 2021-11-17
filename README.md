@@ -27,7 +27,7 @@ Users should be able to:
 
 ### Link
 
-- Live Site URL: [URL](https://your-live-site-url.com)
+- Live Site URL: [URL](https://rojasagusf.github.io/project-3Columns/)
 
 ### Built with
 
