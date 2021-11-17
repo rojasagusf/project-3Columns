@@ -16,6 +16,7 @@
 /*--- BODY ---*/
 
 body {
+    height: 100vh;
     background-color: hsl(0, 0%, 95%);
 }
 
@@ -27,8 +28,13 @@ main {
 
 /*--- CARDS ---*/
 
-article {
+section {
     height: 25em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-shadow: 1px 15px 54px -6px rgba(113,113,113,0.59);
 }
 
 .card-1 {
@@ -50,7 +56,7 @@ article {
 }
 
 .container {
-    padding: 3em 3em;
+    padding: 3em;
 }
 
 /*--- COMPONENTS ---*/
@@ -68,7 +74,7 @@ h3 {
     margin-bottom: .5em; 
 }
 
-p {
+div p {
     font-family: 'Lexend Deca', sans-serif;
     color: hsla(0, 0%, 100%, 0.55);
     line-height: 1.8;
@@ -84,6 +90,7 @@ button {
     padding: .8em;
     width: 9em;
     border-radius: 50px;
+    cursor: pointer;
 }
 
 .first-button {
@@ -101,15 +108,116 @@ button {
 /*--- FOOTER ---*/
 
 footer {
-    
     text-align: center;
 }
 
 footer p {
+    font-family: 'Lexend Deca', sans-serif;
     color: #BCB8B1
 }
 
-footer p a {
+footer p a { 
     text-decoration: none;
     color: hsl(31, 77%, 52%);
+}
+
+
+/*--- MEDIA QUERYS ---*/
+
+@media screen and (min-width: 550px) {
+
+    main {
+        margin: 0;
+    }
+
+    footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .flex-container {
+        padding: 5em 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    section {
+        width: 25em;
+        height: 45em;
+        align-items: flex-start;
+        justify-content: center;
+    }
+
+    img {
+        width: 5.5em;
+        margin-bottom: 2.5em;
+    }
+
+    h3 {
+        font-size: 3em;
+        margin-bottom: 1em;
+    }
+
+    div p {
+        font-size: 1.1em;
+        line-height: 2.2;
+        margin-bottom: 12em;
+    }
+
+    button {
+        font-size: 1.2em;
+        padding: .8em;
+    }
+
+    button:hover {
+        background-color: transparent;
+        border: 1px solid hsl(0, 0%, 95%);
+        color: hsl(0, 0%, 95%);
+    }
+}
+
+@media screen and (min-width: 800px) {
+
+    .card-1 {
+        border-top-right-radius: 0;
+        border-top-left-radius: 15px;
+        border-bottom-left-radius: 15px;
+    }
+
+    .card-2 {
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 15px;
+    }
+
+    .card-3 {
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+
+    .card-1 {
+        border-top-right-radius: 0;
+        border-top-left-radius: 15px;
+        border-bottom-left-radius: 15px;
+    }
+
+    .card-2 {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+
+    .card-3 {
+        border-top-right-radius: 15px;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 15px;
+    }
 }
